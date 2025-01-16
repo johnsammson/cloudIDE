@@ -26,7 +26,7 @@ const registerUser = async (req,res) =>{
         await newPortEntry.save();
 
         // Create the user with the socket URL
-        const socketUrl = `http://167.71.224.25:${newPort}`;
+        const socketUrl = `https://justcode.dotmarket.tech:${newPort}`;
         const user = new User({username:username,email:email,password:password,role:role,socketUrl:socketUrl, port: newPort})
         user.save()
         console.log("user registered")

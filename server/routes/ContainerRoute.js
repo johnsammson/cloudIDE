@@ -19,7 +19,7 @@ async function createContainerForUser(userId, port ) {
     
     try {
         await execAsync(`mkdir -p ${userDir}`);
-        await execAsync(`docker run -d --name ${containerName} -p ${port}:9000 ubuntu-ide-server`);
+        await execAsync(`docker run -d --name ${containerName} -p ${port}:9000 mahesh7736/ubuntu-ide-server`);
         return containerName;
     } catch (error) {
         console.error(`Failed to create container for user ${userId}:`, error);
